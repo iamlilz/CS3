@@ -1,0 +1,28 @@
+body{
+	background-image: url("bg.jfif");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1{
+	text-align: center;
+	background-color: #FFB3CB;
+	font-family: Arial;
+	border: 2px dotted blue;
+	padding: 10px 15px 10px 10px;
+	width: 250px;
+	margin-bottom: 20px;
+}
+p{
+	background-color: hsl(266, 100%, 92%);
+	text-align: justify;
+	padding: 20px;
+	border-style: dotted ridge double dashed;
+	width:500px;
+}
+span{
+	font-style: italic;
+	font-weight: bold;
+	color: rgb(0, 143, 90);
+	margin-left:2px;
+	margin-right:5px;
+}
