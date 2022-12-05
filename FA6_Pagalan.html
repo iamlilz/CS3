@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> FA6_Pagalan </title>
+		<style>
+		a {text-decoration: none;}
+            #a1:link {
+                background-color: darkblue;
+                font-family: Arial, sans-serif;
+                color: darkcyan;
+                font-size: 40px;
+                border: 1px solid blue;
+            }
+			#a1:visited {
+                background-color: pink;
+                border: 1px solid maroon;
+			}
+            #a1:hover{
+                background-color: green;
+				border: 1px solid gold;
+            }
+            #a1:active {
+                background-color: pink;
+                border: 1px solid red;
+            }
+            #a2:link {
+                background-color: cyan;
+                font-family: Arial, sans-serif;
+                color: darkolivegreen;
+                font-size: 40px;
+                border: 1px solid greenyellow;
+            }
+			#a2:visited {
+                background-color: gold;
+                border: 1px solid purple;
+            }
+            #a2:hover{
+                background-color: palegreen;
+                border: 1px solid green;
+            }
+            #a2:active {
+                background-color: hotpink;
+                border: 1px solid darkorange;
+            }
+			
+            #div1 {
+                border: 1px solid red;
+                height: 160px;
+                padding: 12px;
+                width: 30%;
+                font-size: 35px;
+                margin-top: 40px;   
+            }
+            #div1:target {
+                background-color: darkblue;
+                color: goldenrod;
+                border: 1px solid black;
+            }
+            #div2 {
+                border: 1px solid black;
+                height: 160px;
+                padding: 12px;
+                width: 30%;
+                font-size: 35px;
+                margin-top: 40px;   
+            }
+            #div2:target {
+                background-color: darkcyan;
+                border: dashed 10px green;
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a id="a1" href="#div1">First Link</a>    
+            <a id="a2" href="#div2">Second Link</a>
+        </header>    
+        <div id="div1">
+            Div 1 here
+        </div><br>
+        <div id="div2">
+            Div 2 here
+        </div>
+    </body>
+</html>
