@@ -2,7 +2,7 @@
 	list-style-type: none;
 	font-family: Cursive;
 }
-#head{
+header{
 	line-height: 0px;
 	background-color:#E57373;
 	padding: 15px;
@@ -66,4 +66,38 @@ body{
   width: 100%;
   text-align: center;
   font-size: 20px;
+}
+#mail {
+	position:relative;
+	top:20px;
+	right: 10%;
+	border: 2px solid black;
+	border-radius: 10px;
+	background: url('../images/socmed.png') no-repeat -2px -106px;
+	color: transparent;
+	display:inline-block;
+	padding:20px;
+	}
+#mail:hover{
+    background: url('../images/socmed.png') no-repeat -2px -106px;
+	border: 2px solid black;
+	color: black;
+	transform: scale(2);
+}
+#fb {
+	position:relative;
+	top:20px;
+	left: 15%;
+	border: 2px solid black;
+	border-radius: 10px;
+	background: url('../images/socmed.png') no-repeat -940px -500px;
+	color: transparent;
+	display:inline-block;
+	padding:20px;
+	}
+#fb:hover{
+    background: url('../images/socmed.png') no-repeat -940px -500px;
+	border: 2px solid black;
+	color: black;
+	transform: scale(2);
 }
