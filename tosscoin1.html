@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Coin Toss
+    </title>
+	<style>
+	body {
+	align: center;
+	}	
+
+	</style>
+  <body>
+    <button onclick="tossFunction()"> Toss a coin </button>
+    <p id="toss" style="color: "cyan"; font-size: 30px"></p>
+	<p id= "show" style="color: "cyan"; font-size: 30px"></p>
+    
+    <script>
+      function tossFunction() {
+	let coin = Math.random();
+	if (coin < 0.5)
+	{
+        document.getElementById("toss").innerHTML = "Coin landed on: ";
+	document.getElementById("show").innerHTML = "Heads.";
+	}
+	else{
+	document.getElementById("toss").innerHTML = "Coin landed on: ";
+	document.getElementById("show").innerHTML = "Tails.";
+	}
+}
+    </script>
+  </body>
+</html>
