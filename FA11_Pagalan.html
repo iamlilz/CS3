@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<hmtl>
+	<head>
+		<title> FA11 </title>
+	</head>
+	<body onload = "determinetriangle()">
+	<script>
+		
+		function determinetriangle() {
+		var a = prompt ("Input first side's value: ");
+		var b = prompt ("Input second side's value: ");
+		var c = prompt ("Input third side's value: ");
+		
+		if (a == b == c){
+			alert ("This triangle is an EQUILATERAL triangle.");
+		}
+		else if (a == b || a == c) {
+			alert ("This triangle is an ISOSCELES triangle.");
+		}
+		else{
+			alert ("This triangle is a SCALENE triangle.");
+		}
+	}
+	
+		</script>
+	</body>		
+	
+</html>
