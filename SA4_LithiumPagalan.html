@@ -37,18 +37,20 @@
 			
 			function computeMarketValue(){
 			
+			// function to see how much the car is worth based by it's age
+			
 			if (carage > 10 ){
 				document.getElementById("currentvalue").innerHTML = "The car's current market value: Php 70 000.";
-			}
+			}// if age is equal to or greater than 10
 			else if (carage => 8 ){
 				document.getElementById("currentvalue").innerHTML = "The car's current market value: Php 100 000. ";
-			}
+			} // if age is equal to or greater than 8
 			else if (carage => 5 ){
 				document.getElementById("currentvalue").innerHTML = "The car's current market value: Php 75% less than the cost.";
-			}
+			}// if age is equal to or greater than 5
 			else if (carage < 5 ){
 				document.getElementById("currentvalue").innerHTML = "The car's current market value: Php 50% less than the cost.";
-			}
+			}// if age is less than 5
 			else {
 				document.getElementById("currentvalue").innerHTML = "The car's current market value: Php 10% less than the cost.";
 			}
