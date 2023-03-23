@@ -2,7 +2,12 @@
 <html>
 	<head>
 		<title>Car Deprecation Calculator</title>
-		<!-- provide the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="description" content="SA 7">
+		<meta name="author" content="KJGP">
+		<meta name="keywords" content="HTML, JavaScript">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <style>
         	body {background: lightblue; 
             	font-family: arial;
@@ -13,17 +18,20 @@
         </style>
 
 	</head>
-<body>
-	<h1> Car Depreciation Calculator </h1>
-	<h2> Your Car Model: <span id="model"> </span></h2>
-    <h2> Car Cost: <span id="cost"> </span></h2>
-    <h2> Age of your Car: <span id="age"> </span></h2>
-    <h2> Good Condition?: <span id="condition"> </span></h2>
-    <h2> Your Car's Current Market Value <span id="currentvalue"> </span></h2>
+	<body>
+		
+		<h1> Car Depreciation Calculator </h1>
+		<h2> Your Car Model: <span id="model"> </span></h2>
+		<h2> Car Cost: <span id="cost"> </span></h2>
+		<h2> Age of your Car: <span id="age"> </span></h2>
+		<h2> Good Condition?: <span id="condition"> </span></h2>
+		<h2> Your Car's Current Market Value <span id="currentvalue"> </span></h2>
     
-    <button onclick="enterCar()"> Enter your Car information </button>
-    <script>
-    	/* do not forget to place comments on the script */
+		<button onclick="enterCar()"> Enter your Car information </button>
+		
+		<script>
+    	
+		/* function to ask for details about the car */
     	function enterCar() {
         	carmodel = prompt("Enter Car Model");
             carcost = prompt("Enter Cost of the Car");
@@ -34,29 +42,30 @@
             age.innerHTML = carage;
             condition.innerHTML = (good) ? "Yes" : "No";      
             computeMarketValue(parseFloat(cost),parseFloat(age),good); // create this function 
+			}
 			
-			function computeMarketValue(){
-			
+			function computeMarketValue(model, cost, age, condition){
 			// function to see how much the car is worth based by it's age
-			
+			let value;
 			if (carage > 10 ){
-				document.getElementById("currentvalue").innerHTML = "The car's current market value: Php 70 000.";
+				value = 70000;
 			}// if age is equal to or greater than 10
-			else if (carage => 8 ){
-				document.getElementById("currentvalue").innerHTML = "The car's current market value: Php 100 000. ";
+			else if (carage == 8 && age ==9){
+				value  = 100000;
 			} // if age is equal to or greater than 8
-			else if (carage => 5 ){
-				document.getElementById("currentvalue").innerHTML = "The car's current market value: Php 75% less than the cost.";
+			else if (carage >= 5){
+				value = 0.25*carcost;
 			}// if age is equal to or greater than 5
 			else if (carage < 5 ){
-				document.getElementById("currentvalue").innerHTML = "The car's current market value: Php 50% less than the cost.";
+				value=0.5*carcost;
 			}// if age is less than 5
-			else {
-				document.getElementById("currentvalue").innerHTML = "The car's current market value: Php 10% less than the cost.";
-			}
-		}
-    }
-	
+			
+			// if the car is in bad condition
+			if (!good){
+				value *= 0.9 ;
+					}
+			 document.getElementById("currentvalue").innerHTML = value; //display value
+	}
     </script>
     
 </body>
