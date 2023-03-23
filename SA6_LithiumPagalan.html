@@ -3,7 +3,7 @@
 	<head>
 		<title>One Time Password </title>
 		<meta charset="UTF-8">
-		<meta name="description" content="SA 7">
+		<meta name="description" content="SA 6">
 		<meta name="author" content="KJGP">
 		<meta name="keywords" content="HTML, JavaScript">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,37 +21,32 @@
 	</head>
 <body onload="randotp()">
 	<h1> Final Verification Step </h1>
-	<h2 onclick= "randotp()"> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a href="#"> New OTP </a></h2>
-    <button onclick="password()"> Enter the OTP as shown above </button>
-    
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a href="#"  onclick= "randotp()"> New OTP </a></h2>
+    <button onclick="enterpassword()"> Enter the OTP as shown above </button>
+		
     <script>
     
-		// display randomized otp
+		// generate randomized otp
 		function randotp(){
-		var pass = "0123456789"
+		var pass = "0123456789";
 		n = '';
 		for (i = 0; i < 6; i++){
 		n += pass[Math.floor(Math.random () * 10)];
 			}
-		otp.innerHTML = n;
+		otp.innerHTML = n; // display randomized otp
 		}
 		
 		//verify if the otp and randotp is same
-		function password(){
-		var x = prompt ("Input a 6 digit OTP: ");
+		function enterpassword(){
+		var x = prompt ("Input a 6-digit OTP: "); 
 		if (x == n){
-				window.open("https://www.youtube.com/watch?v=1JYqbPzf0aI");
-
+				window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
 		}
 		else{
 			alert ("Invalid Password.");
+			randotp(); 
 		}
-
 }
-
-
-
-
     </script>
 </body>
 </html>
