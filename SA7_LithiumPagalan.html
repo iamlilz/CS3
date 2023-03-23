@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="SA 7">
+		<meta name="author" content="KJGP">
+		<meta name="keywords" content="HTML, JavaScript">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+		<style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick = "urfortune()"> Click here to enter your name </button>
+     <script>
+    	
+		/* function to ask the name and return length*/
+		
+		function urfortune(){
+			var name = prompt ("Please state your name: ")
+			document.getElementById("thename").innerHTML = name;
+			x = name.length;
+			alert(x);
+			
+
+			// adding the digits
+			while (x > 9) {
+            x = (x - (x % 10) ) / 10 + (x % 10);
+			alert (x);
+			}
+			
+			// the fortunes
+			switch (x){
+				case 0 :
+				document.getElementById("fortune").innerHTML = "You will get nothing.";
+				break;
+				case 1 :
+				document.getElementById("fortune").innerHTML = "You will get Php 1.";
+				break;
+ 				case 2 :
+				document.getElementById("fortune").innerHTML = "You will get Php 2.";
+				break;
+				case 3 :
+				document.getElementById("fortune").innerHTML = "You will get Php 3.";
+				break;
+  				case 4 :
+				document.getElementById("fortune").innerHTML = "You will get Php 4.";
+				break;
+				case 5 :
+				document.getElementById("fortune").innerHTML = "You will get Php 5.";
+				break;
+ 				case 6 :
+				document.getElementById("fortune").innerHTML = "You will get Php 6.";
+				break;
+				case 7 :
+				document.getElementById("fortune").innerHTML = "You will get Php 7.";
+				break;
+  				case 8 :
+				document.getElementById("fortune").innerHTML = "You will get Php 8.";
+				break;
+				case 9 :
+				document.getElementById("fortune").innerHTML = "You will get Php 9.";
+				break;
+}		
+		}
+    </script>
+</body>
+</html>
