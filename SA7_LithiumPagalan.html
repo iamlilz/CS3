@@ -33,46 +33,43 @@
 			var name = prompt ("Please state your name: ")
 			document.getElementById("thename").innerHTML = name;
 			x = name.length;
-			alert(x);
+			alert(x);//name length (for coder)
 			
 
 			// adding the digits
 			while (x > 9) {
             x = (x - (x % 10) ) / 10 + (x % 10);
-			alert (x);
+			alert (x);//added digits (for coder)
 			}
 			
 			// the fortunes
 			switch (x){
-				case 0 :
-				document.getElementById("fortune").innerHTML = "You will get nothing.";
-				break;
 				case 1 :
-				document.getElementById("fortune").innerHTML = "You will get Php 1.";
+				document.getElementById("fortune").innerHTML = "You will get Php 1000.";
 				break;
  				case 2 :
-				document.getElementById("fortune").innerHTML = "You will get Php 2.";
+				document.getElementById("fortune").innerHTML = "You will win Siglakas.";
 				break;
 				case 3 :
-				document.getElementById("fortune").innerHTML = "You will get Php 3.";
+				document.getElementById("fortune").innerHTML = "You will get a perfect score in Biology.";
 				break;
   				case 4 :
-				document.getElementById("fortune").innerHTML = "You will get Php 4.";
+				document.getElementById("fortune").innerHTML = "May manglilibre sayo.";
 				break;
 				case 5 :
-				document.getElementById("fortune").innerHTML = "You will get Php 5.";
+				document.getElementById("fortune").innerHTML = "You will fall in love with your best friend.";
 				break;
  				case 6 :
-				document.getElementById("fortune").innerHTML = "You will get Php 6.";
+				document.getElementById("fortune").innerHTML = "You will fail a test.";
 				break;
 				case 7 :
-				document.getElementById("fortune").innerHTML = "You will get Php 7.";
+				document.getElementById("fortune").innerHTML = "You will lose a gamble.";
 				break;
   				case 8 :
-				document.getElementById("fortune").innerHTML = "You will get Php 8.";
+				document.getElementById("fortune").innerHTML = "You will get Php 8000.";
 				break;
 				case 9 :
-				document.getElementById("fortune").innerHTML = "You will get Php 9.";
+				document.getElementById("fortune").innerHTML = "Your crush will confess";
 				break;
 }		
 		}
