@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formative Assessment 12</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="CS 3">
+		<meta name="author" content="KJGP">
+		<meta name="keywords" content="HTML, JavaScript">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+			table, td {
+			border: 2px solid;
+			font-size: 30px;
+			padding: 5px;
+			align: center;
+			text-align: center;
+			}
+			body {
+			text-align: center;
+			background: #59c5e3;
+			}
+		</style>
+		
+    </head>
+	
+	<body>
+		<h2> Multiplication Table </h2>
+       
+           
+		   <h3> Input numbers between 2 to 10 </h3>
+		   <input type = "number" id = "x">
+		   <input type = "number" id = "y">
+		   
+		   </br> 
+		   </br>
+		   </br>
+		   </br>
+		   </br>
+		  
+		   <button onclick="table()"> Click when ready! </button>
+		
+			</br> 
+		   </br>
+		   </br>
+		   </br>
+		   </br>
+		
+			<center>
+			<div id="gentable"></div>
+			</center>
+		
+	 <script>
+	 
+		function table(){
+		
+		var x = document.getElementById("x").value;
+		var y = document.getElementById("y").value;
+		
+		if ( x<2 || x >10 && y<2 || y >10 ){
+			alert("Please enter numbers between 2 and 10");
+			return;
+		}
+		
+		var table = "<table>"
+		for (var i = 1 ; i <= x; i++ ){
+			table += "<tr>";
+			for(var j = 1; j <= y; j++){
+				table += "<td>" + (j * i) + "</td>";
+			}
+			table += "</tr>";
+		}
+		table += "</table>"
+		document.getElementById("gentable").innerHTML = table;
+		}
+		
+	</script>
+	</body>
+</html>
