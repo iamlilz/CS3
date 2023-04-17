@@ -50,14 +50,18 @@
 			<div id="gentable"></div>
 			</center>
 		
-	 <script>
+	<script>
 	 
 		function table(){
 		
 		var x = parseInt(document.getElementById("x").value);
 		var y = parseInt(document.getElementById("y").value);
 		
-		if (( x<2 || x>10) && (y<2 || y>10 )){
+		if (( x<2 || x>10) || (y<2 || y>10 )){
+			alert("Please enter numbers between 2 and 10");
+			return;
+		}
+		if (NaN(x) || NaN(y)){
 			alert("Please enter numbers between 2 and 10");
 			return;
 		}
