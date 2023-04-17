@@ -29,8 +29,8 @@
        
            
 		   <h3> Input numbers between 2 to 10 </h3>
-		   <input type = "number" id = "x">
-		   <input type = "number" id = "y">
+		   <input type = "text" id = "x">
+		   <input type = "text" id = "y">
 		   
 		   </br> 
 		   </br>
@@ -54,10 +54,10 @@
 	 
 		function table(){
 		
-		var x = document.getElementById("x").value;
-		var y = document.getElementById("y").value;
+		var x = parseInt(document.getElementById("x").value);
+		var y = parseInt(document.getElementById("y").value);
 		
-		if (( x<2 || x >10) && (y<2 || y >10 )){
+		if (( x<2 || x>10) && (y<2 || y >10 )){
 			alert("Please enter numbers between 2 and 10");
 			return;
 		}
