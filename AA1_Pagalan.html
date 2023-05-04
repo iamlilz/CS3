@@ -151,7 +151,7 @@
 				 aminoAcid.push(amino);
 			}
 			document.write('[' + codon.map(code => `"${code}"`).join(',ㅤ') + ']');
-            document.write('<br>' + '<br>' + aminoAcid.map((amino, index) => `${codon[index]} → ${amino}`).join('<br>'));
+            document.write('<br>' + '<br>' + aminoAcid.map((amino, index) => `${codon[index]} --> ${amino}`).join('<br>'));
 		        }
 				
 				
