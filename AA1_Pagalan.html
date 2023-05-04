@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Genetic Coding</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="AA 1">
+		<meta name="author" content="KJGP">
+		<meta name="keywords" content="HTML, JavaScript">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+        	body {background: lightblue; 
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {color: maroon}
+        </style>
+	</head>
+	<body>
+		<script>
+			var mRNA = prompt ("Input your genetic code: ").toUpperCase();
+			var start = mRNA.indexOf("AUG");
+			var codon = [];
+            var aminoAcid = [];
+			var code = "";
+			var amino = "";
+			
+			if (start == -1) {
+				document.write ("Starting codon cannot be found.") } 
+			else {
+                var frameReading = mRNA.slice(start);
+                var i = 0;
+
+			while (i < frameReading.length - 3) {
+                code = frameReading.slice(i, i + 3);
+                codon.push(code);
+                i += 3 }
+			
+			for (var i = 0; i < codon.length; i++) {
+				switch (codon[i]) {
+					case "UUU":
+					case "UUC":
+					amino = "Phe";
+						break;
+					case "UUA":
+					case "UUG":
+					case "CUU":
+					case "CUC":
+					case "CUA":
+					case "CUG":
+					amino = "Leu";
+						break;
+					case "AUU":
+					case "AUC":
+					case "AUA":
+					amino = "Iso";
+						break;
+					case "AUG":
+					amino = "Met"
+						break;
+					case "GUU":
+					case "GUC":
+					case "GUG":
+					case "GUA":
+					amino = "Val";
+						break;
+					case "UCU":
+					case "UCC":
+					case "UCA":
+					case "UCG":
+					amino = "Ser";
+						break;
+					case "CCU":
+					case "CCC":
+					case "CCA":
+					case "CCG":
+					amino = "Pro";
+						break;
+					case "ACU":
+					case "ACC":
+					case "ACA":
+					case "ACG":
+					amino = "Thr";
+						break;
+					case "GCU":
+					case "GCC":
+					case "GCA":
+					case "GCG":
+					amino = "Ala"
+						break;
+					case "UAU":
+					case "UAC":		
+					amino = "Tyr";
+						break;
+					case "UAA":
+					case "UAG":
+					case "UGA":
+					amino = "Stop";
+						break;
+					case "CAU":
+					case "CAC":
+					amino = "His";
+						break;
+					case "CAA":
+					case "CAG":
+					amino = "Glu";
+						break;
+					case "AAU":
+					case "AAC":
+					amino = "Asn";
+						break;
+					case "AAA":
+					case "AAG":
+					amino = "Lys";
+						break;
+					case "GAU":
+					case "GAC":
+					amino = "Asp";
+						break;
+					case "GAA":
+					case "GAG":
+					amino = "Glu";
+						break;
+					case "UGU":
+					case "UGC":
+					amino = "Cys";
+						break;
+					case "UCG":
+					amino = "Trp";
+						break;
+					case "CGU":
+					case "CGC":
+					case "CGA":
+					case "CGG":
+					case "AGA":
+					case "AGG":
+					amino = "Arg";
+						break;
+					case "AGU":
+					case "AGC":
+					amino = "Ser";
+						break;
+					case "GGU":
+					case "GGC":
+					case "GGA":
+					case "GGG":
+					amino = "Gly";
+						break;					
+				}
+				 aminoAcid.push(amino);
+			}
+			document.write('[' + codon.map(code => `"${code}"`).join(',ㅤ') + ']');
+            document.write('<br>' + '<br>' + aminoAcid.map((amino, index) => `${codon[index]} → ${amino}`).join('<br>'));
+		        }
+				
+				
+		</script>
+	</body>
+</html>
